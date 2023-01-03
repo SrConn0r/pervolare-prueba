@@ -64,6 +64,11 @@ export class AttributeComponent {
       this.globalService.addAttribute(this.attributeObject);
   
       this.attributeForm.reset();
+      this.attributeObject = {
+        id: '',
+        name: '',
+        type: {id: '', name: ''},
+      };
   
       console.log(this.attributeObject);
     }

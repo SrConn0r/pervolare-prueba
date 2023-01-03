@@ -69,6 +69,12 @@ export class ProductComponent implements OnInit{
     this.globalService.addProduct(this.productObject);
 
     this.productForm.reset();
+    this.productObject = {
+      id: '',
+      name: '',
+      description: '',
+      value: 0
+    };
 
     console.log(this.productObject);
   }

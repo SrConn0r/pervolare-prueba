@@ -31,3 +31,10 @@
 textarea{
     width: 100%;
 }
+
+@media (max-width:500px) {
+    .grid-form-products{
+        flex-direction: column;
+        gap: 2em;
+    }
+}

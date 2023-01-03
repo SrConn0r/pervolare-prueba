@@ -13,8 +13,8 @@ import {InputNumberModule} from 'primeng/inputnumber';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import {CheckboxModule} from 'primeng/checkbox';
 import {DropdownModule} from 'primeng/dropdown';
-
-
+import {MultiSelectModule} from 'primeng/multiselect';
+import {ToastModule} from 'primeng/toast';
 
 
 @NgModule({
@@ -31,6 +31,8 @@ import {DropdownModule} from 'primeng/dropdown';
     InputTextareaModule,
     TableModule,
     DropdownModule,
+    MultiSelectModule,
+    ToastModule
   ],
   exports: [
     ButtonModule,
@@ -42,7 +44,9 @@ import {DropdownModule} from 'primeng/dropdown';
     InputNumberModule,
     InputTextareaModule,
     TableModule,
-    DropdownModule
+    DropdownModule,
+    MultiSelectModule,
+    ToastModule
   ]
 })
 export class SharedModule { }

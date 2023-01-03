@@ -3,7 +3,7 @@
 export interface AttributeModel {
     id: string;
     name: string;
-    type: AttributeTypeModel;
+    type?: AttributeTypeModel;
     createDate?: Date;
     updateDate?: Date;
     softDelete?: boolean;

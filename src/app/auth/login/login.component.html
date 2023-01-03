@@ -18,7 +18,7 @@
             <div class="input-login">
                 <span class="p-float-label p-input-icon-left">
                     <i class="pi pi-lock"></i>
-                    <input type="text" id="inputtext-left" pInputText formControlName="password"> 
+                    <input type="password" id="inputtext-left" pInputText formControlName="password"> 
                     <label for="inputtext-left">Contraseña</label>
                 </span>
                 <small *ngIf="f['password']?.touched && f['password'].errors?.['required']"  class="p-error block">Contraseña requerida</small>

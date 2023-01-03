@@ -19,8 +19,19 @@
     width: 100%;
     gap: 1em;
     margin-bottom: 2em;
-    input, .input-attributes, p-dropdown{
+    input, .input-attributes{
         width: 100%;
     }
 
+}
+
+:host ::ng-deep .p-dropdown{
+    width: 100%;
+}
+
+@media (max-width:500px) {
+    .grid-form-attributes{
+        flex-direction: column;
+        gap: 2em;
+    }
 }

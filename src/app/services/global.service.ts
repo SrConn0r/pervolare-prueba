@@ -39,15 +39,59 @@ export class GlobalService {
     );
     this.myAttributes.push({
       id: '1',
-      name: 'Atributo 1',
+      name: 'Color Blanco',
       type: this.myAttributesTypes[0],
-    })
+    },
+    {
+      id: '2',
+      name: 'Color Azul',
+      type: this.myAttributesTypes[0],
+    },
+    {
+      id: '3',
+      name: 'Talla L',
+      type: this.myAttributesTypes[1],
+    },
+    {
+      id: '4',
+      name: 'Marca Adidas',
+      type: this.myAttributesTypes[2],
+    },
+    {
+      id: '5',
+      name: 'Fábrica China',
+      type: this.myAttributesTypes[3],
+    });
     this.myProducts.push(
       {
         id: '1',
-        name: 'Producto 1',
+        name: 'Camisa',
         description: 'Producto Descripción 1',
-        value: 1
+        value: 10000
+      },
+      {
+        id: '2',
+        name: 'Pantalón',
+        description: 'Producto Descripción 2',
+        value: 70000
+      },
+      {
+        id: '3',
+        name: 'Sudadera',
+        description: 'Producto Descripción 3',
+        value: 50000
+      },
+      {
+        id: '4',
+        name: 'Medias',
+        description: 'Producto Descripción 4',
+        value: 20000
+      },
+      {
+        id: '5',
+        name: 'Chaqueta',
+        description: 'Producto Descripción 5',
+        value: 300000
       },
     )
   }

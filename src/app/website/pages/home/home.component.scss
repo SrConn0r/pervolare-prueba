@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+    width: 100%;
+    gap: 2em;
+    align-items: stretch;
+    max-width: 100%;
+    h2{
+        margin-bottom: 2em;
+    }
+    .products, .attributes, .result, .p-multiselect, .add{
+    max-width: 100%;
+    width: 100%;
+    }
+    .add{
+        display: flex;
+        align-items: flex-end;
+    }
+}
+.result-data span{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.table{
+    margin-top: 2em;
+}
+:host ::ng-deep .p-multiselect, :host ::ng-deep  .p-dropdown{
+    width: 100%;
+}
+
+
+@media (max-width:500px) {
+    .container{
+        flex-direction: column;
+        gap: 2em;
+    }
+}

@@ -34,6 +34,7 @@
       justify-content: flex-start;
       transform: translateX(-100%);
       transition: all ease-out .5s;
+      z-index: 1000;
       &.active {
         transform: translateX(0);
       }
