@@ -8,7 +8,8 @@ import { ProductComponent } from './pages/product/product.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AttributeComponent } from './pages/attribute/attribute.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,14 @@ import { FooterComponent } from './components/footer/footer.component';
     ProductComponent,
     NavbarComponent,
     AttributeComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     CommonModule,
     WebsiteRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class WebsiteModule { }

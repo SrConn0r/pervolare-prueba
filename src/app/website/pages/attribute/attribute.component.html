@@ -1,1 +1,59 @@
-<p>attribute works!</p>
+<section class="add-attribute-box">
+    <h2>Agregar atributo</h2>
+    <form [formGroup]="attributeForm" (submit)="onSubmit()">
+      <div class="grid-form-attributes">
+        <!-- NAME -->
+        <div class="input-attributes">
+          <span class="p-float-label">
+            <input type="text" id="inputtext" pInputText formControlName="name" />
+            <label for="inputtext">Nombre</label>
+          </span>
+          <small
+            *ngIf="f['name']?.touched && f['name'].errors?.['required']"
+            class="p-error block"
+            >Nombre requerido</small
+          >
+          <small *ngIf="f['name'].errors?.['minlength'] || f['name'].errors?.['maxlength']" class="p-error block">El nombre debe contener entre 2 a 10 carácteres</small>
+  
+        </div>
+  
+        <!-- TYPE -->
+        <div class="input-attributes">
+            <span class="p-float-label">
+                <p-dropdown inputId="dropdown" [options]="attributeTypes" [(ngModel)]="selectedAttributeType" optionLabel="name" formControlName="type"></p-dropdown>
+                <label for="dropdown">Tipos de atributo</label>
+            </span>
+            <small
+            *ngIf="f['type']?.touched && f['type'].errors?.['required']"
+            class="p-error block"
+            >Tipo requerido</small
+          >
+  
+        </div>
+      </div>
+  
+      <p-button label="Crear atributo" icon="pi pi-save" iconPos="right" type="submit"></p-button>
+  
+    </form>
+  </section>
+  
+  <section>
+    <h2>attributeos</h2>
+    <p-table [value]="attributes" [tableStyle]="{'min-width': '50rem'}">
+      <ng-template pTemplate="header">
+          <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Tipo</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-attribute>
+          <tr>
+              <td>{{attribute.id}}</td>
+              <td>{{attribute.name}}</td>
+              <td>{{attribute.type.name}}</td>
+          </tr>
+      </ng-template>
+  </p-table>
+  </section>
+  

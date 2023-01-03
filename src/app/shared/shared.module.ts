@@ -9,7 +9,12 @@ import {PanelMenuModule} from 'primeng/panelmenu';
 import {TableModule} from 'primeng/table';
 import {BreadcrumbModule} from 'primeng/breadcrumb';
 import {InputTextModule} from 'primeng/inputtext';
+import {InputNumberModule} from 'primeng/inputnumber';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 import {CheckboxModule} from 'primeng/checkbox';
+import {DropdownModule} from 'primeng/dropdown';
+
+
 
 
 @NgModule({
@@ -21,7 +26,11 @@ import {CheckboxModule} from 'primeng/checkbox';
     MenuModule,
     PanelMenuModule,
     InputTextModule,
-    CheckboxModule
+    CheckboxModule,
+    InputNumberModule,
+    InputTextareaModule,
+    TableModule,
+    DropdownModule,
   ],
   exports: [
     ButtonModule,
@@ -29,7 +38,11 @@ import {CheckboxModule} from 'primeng/checkbox';
     MenuModule,
     PanelMenuModule,
     InputTextModule,
-    CheckboxModule
+    CheckboxModule,
+    InputNumberModule,
+    InputTextareaModule,
+    TableModule,
+    DropdownModule
   ]
 })
 export class SharedModule { }
