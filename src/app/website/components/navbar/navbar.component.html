@@ -1,0 +1,56 @@
+<!-- MOBILE -->
+<div class="show-mobile">
+    <div>
+      <button (click)="toggleMenu()">
+        <i class="pi pi-bars"></i>
+      </button>
+      <a  routerLink="home">
+        <img class="logo" src="../../../../assets/pervolare-logo-horizontal.svg" alt="logo">
+      </a>
+      <button pButton pRipple type="button" icon="pi pi-sign-out" class="p-button-rounded p-button-outlined p-button-secondary"></button>
+    </div>
+    <div class="side-menu" [class.active]="activeMenu">
+      <button class="close-button" (click)="toggleMenu()">
+        <i class="pi pi-times"></i>
+      </button>
+      <ul>
+        <li><a routerLinkActive="active" routerLink="home">Home</a></li>
+        <li>
+          <a routerLinkActive="active" routerLink="products">
+            Productos
+          </a>
+        </li>
+        <li>
+            <a routerLinkActive="active" routerLink="attributes">
+            Atributos
+            </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- WEB AND TABLET -->
+  <div class="hide-mobile">
+    <div>
+      <nav>
+        <a class="logo" routerLink="home">
+          <img src="../../../../assets/pervolare-logo-horizontal.svg" alt="logo">
+        </a>
+        <ul>
+          <!-- <li><a routerLinkActive="active" routerLink="home">Home</a></li> -->
+          <li >
+            <a routerLinkActive="active" routerLink="products">
+              Productos
+            </a>
+          </li>
+          <li>
+            <a routerLinkActive="active" routerLink="attributes">
+            Atributos
+            </a>
+        </li>
+        </ul>
+        <p-button label="Salir" icon="pi pi-sign-out" iconPos="right" (onClick)="signOut()"></p-button>
+      </nav>
+    </div>
+  </div>
+  

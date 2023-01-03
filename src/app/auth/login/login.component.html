@@ -1,1 +1,33 @@
-<p>login works!</p>
+<div class="login-layout">
+    <div class="login-box">
+        <img src="../../../assets/pervolare-logo-vertical.svg" alt="">
+        <form class="login-form" [formGroup]="loginForm" (submit)="onSubmit()">
+
+            <!-- EMAIL -->
+            <div class="input-login">
+                <span class="p-float-label p-input-icon-left">
+                    <i class="pi pi-at"></i>
+                    <input type="text" id="inputtext-left" pInputText formControlName="email" id="email"/> 
+                    <label for="inputtext-left">Email</label>
+                </span>
+                <small *ngIf="f['email']?.touched && f['email'].errors?.['required']"  class="p-error block">Email requerido</small>
+                <small *ngIf="f['email'].errors?.['email']"  class="p-error block">Email incorrecto</small>
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="input-login">
+                <span class="p-float-label p-input-icon-left">
+                    <i class="pi pi-lock"></i>
+                    <input type="text" id="inputtext-left" pInputText formControlName="password"> 
+                    <label for="inputtext-left">Contraseña</label>
+                </span>
+                <small *ngIf="f['password']?.touched && f['password'].errors?.['required']"  class="p-error block">Contraseña requerida</small>
+                <small *ngIf="f['password'].errors?.['minlength'] || f['password'].errors?.['maxlength']" class="p-error block">La contraseña debe contener entre 8 a 16 carácteres</small>
+
+            </div>
+
+            <p-button label="Ingresar" icon="pi pi-arrow-right" iconPos="right" type="submit"></p-button>
+
+        </form>
+    </div>
+</div>
